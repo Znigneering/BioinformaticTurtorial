@@ -1,4 +1,4 @@
-#!/usr/bin/emv python3
+#!/usr/bin/env python3
 
 # import urllib library to read fasta format from uniprot.org
 def read_protein_sequence(uniprot):
@@ -33,17 +33,13 @@ def find_index_protein_motif(filepath,motif):
         
         seq = read_protein_sequence(_id)
         index = ''
-        count = 0
-
 
         for match in re.finditer(motif,seq):
             index+=str(match.start()+1)+" "
 
         if index!='':
             print(index)
-            
 
-        
 if __name__ == "__main__":
 
     find_index_protein_motif("dataset.txt",r'(?=N[^P][ST][^P])')

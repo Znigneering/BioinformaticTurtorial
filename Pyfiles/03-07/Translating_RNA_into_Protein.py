@@ -1,12 +1,9 @@
-
-
 def mRNA_into_protein(seq):
     x = len(seq)
     count = 0
     protein = ''
     
     while count < x:
-        print(count," ",seq[count:count+3])
         if seq[count:count+3]=='UUU' or seq[count:count+3]=='UUC':
             protein+='F'
         elif seq[count:count+3]=='UUA' or seq[count:count+3]=='UUG' or seq[count:count+3]=='CUU' or seq[count:count+3]=='CUC' or seq[count:count+3]=='CUA' or seq[count:count+3]=='CUG':
@@ -59,6 +56,6 @@ def mRNA_into_protein(seq):
 
 if __name__ == "__main__":
     
-    seq = input('enter a DNA sequence: ')
+    seq = input('enter a mRNA sequence: ')
     
-    print(tranlate_mRNA_protein(seq))
+    print(mRNA_into_protein(seq)[0])
