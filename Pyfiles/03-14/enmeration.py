@@ -1,7 +1,17 @@
 #!usr/python/env python3
 
-
 def enumeration(li,start,end):
+    """
+        Its going to permutating all the list elements.
+        
+        Arguments:
+            li --- Type: list | Description: the list contains all the elements
+            start --- Type: int | Description: the start index of the permutation
+            end --- Type: int | Description: the end index of the permutation
+        Retured:
+            seq --- Type: global string | Description: the set of all permutations
+            count --- Type: global int | Description: the number of permutations
+    """
     for x in range(start,end):
         global count
         global seq
